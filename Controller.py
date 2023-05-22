@@ -1,4 +1,4 @@
-import view, modulefinder
+import view, model
 
 
 def start():
