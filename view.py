@@ -25,6 +25,14 @@ def menu(): # Печать меню
         '4 - Выход\n'
     )
 
+def show_contact_lst(contact_lst: list): # функция вывода списка контактов с нумерацией и разбивкой на колонки (может криво работать, если длинное имя). Записью "contact_lst: list" конкретизируем что именно входит
+    print('\n')
+    cnt = 1
+    print('№\tИмя контакта\t\t\t\tНомер') # Шапка списка контактов
+    for contact in contact_lst:
+        print(f'{cnt}.\t{contact[0]}\t\t\t\t\t{contact[1]}', end='\n') # Пронумерованый список с разбинением на колонки № (cnt), Имя контакта (contact[0]), Номер (contact[1]).
+        cnt += 1
+    print('\n')
 
 # #Тесты
 # clear_console()
